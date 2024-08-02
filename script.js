@@ -2,7 +2,7 @@ const jokeEl = document.getElementById('joke');
 const jokeBtn = document.getElementById('joke-btn');
 
 const getJoke = () => {
-    console.log(1,2,3);
+    const xhr = XMLHttpRequest();
 }
 
 jokeBtn.addEventListener('click', getJoke);
