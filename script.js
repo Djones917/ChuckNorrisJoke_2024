@@ -3,7 +3,7 @@ const jokeBtn = document.getElementById('joke-btn');
 
 
 const getJoke = () => {
-    const xhr = XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
 
     xhr.open('GET', 'https://api.chucknorris.io/jokes/random');
 
