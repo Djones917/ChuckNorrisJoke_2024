@@ -1,6 +1,7 @@
 const jokeEl = document.getElementById('joke');
 const jokeBtn = document.getElementById('joke-btn');
 
+
 const getJoke = () => {
     const xhr = XMLHttpRequest();
 
@@ -9,12 +10,15 @@ const getJoke = () => {
     xhr.onreadystatechange = function () {
       if (this.readyState === 4) {
          if (this.status === 200) {
-            jokeEl.innerHTML = JSON.parse(this.responseText);
+            console.log(this.responseText);
+            //jokeEl.innerHTML = JSON.parse(this.responseText);
          } else {
 
          }
       }
     }
-}
+   xhr.send();
+};
+
 
 jokeBtn.addEventListener('click', getJoke);
