@@ -10,7 +10,7 @@ const getJoke = () => {
     xhr.onreadystatechange = function () {
       if (this.readyState === 4) {
          if (this.status === 200) {
-            console.log(this.responseText);
+            console.log(JSON.parse(this.responseText).value);
             //jokeEl.innerHTML = JSON.parse(this.responseText);
          } else {
 
