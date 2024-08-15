@@ -13,7 +13,7 @@ const getJoke = () => {
             //console.log(JSON.parse(this.responseText).value);
             jokeEl.innerHTML = JSON.parse(this.responseText).value;
          } else {
-            jokeEl.innerHTML = 'Chuck is not feeling well!'
+            jokeEl.innerHTML = 'Chuck is not feeling well!';
          }
       }
     }
@@ -22,3 +22,4 @@ const getJoke = () => {
 
 
 jokeBtn.addEventListener('click', getJoke);
+document.addEventListener('DOMContentLoaded', generateJoke);
